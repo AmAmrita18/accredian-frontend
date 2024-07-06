@@ -108,7 +108,7 @@ const Modal = ({ closeModal }) => {
             </label>
             <textarea
               id="message"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md"
+              className="w-full px-3 py-2 border resize-none  border-gray-300 rounded-md"
               rows="4"
             ></textarea>
           </div>
