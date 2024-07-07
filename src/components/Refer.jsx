@@ -3,8 +3,8 @@ import referBg from "/refer.png";
 import icon1 from "../assets/icon1.png"
 import icon2 from "../assets/icon2.png"
 import icon3 from "../assets/icon3.png"
-import banner from "../assets/banner.png";
-import { IoMdCloseCircle } from "react-icons/io";
+import Modal from "./Modal";
+
 const Refer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -53,78 +53,5 @@ const Refer = () => {
     </div>
   );
 };
-const Modal = ({ closeModal }) => {
-  return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 shadow-xl ">
-      <div className="w-[30%] bg-[#EEF5FF] rounded-l-xl">
-        <img
-          src={banner}
-          width={614}
-          height={525}
-          className="object-cover w-[620px] h-[538px]"
-          alt=""
-        />
-      </div>
-      <div className="bg-white p-8 rounded-r-xl shadow-lg w-[90%] max-w-[500px]">
-        <div className="flex justify-end ">
-          <button
-            className="text-red-500 text-[35px] underline"
-            onClick={closeModal}
-          >
-            <IoMdCloseCircle />
-          </button>
-        </div>
-        <h2 className="text-[24px] font-[700] mb-4">Refer and Earn</h2>
 
-        <form>
-          <div className="mb-4">
-            <label
-              className="block text-[16px] font-[500] mb-2"
-              htmlFor="fullName"
-            >
-              Full Name
-            </label>
-            <input
-              type="text"
-              id="fullName"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md"
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              className="block text-[16px] font-[500] mb-2"
-              htmlFor="email"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md"
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              className="block text-[16px] font-[500] mb-2"
-              htmlFor="message"
-            >
-              Message
-            </label>
-            <textarea
-              id="message"
-              className="w-full px-3 py-2 border resize-none  border-gray-300 rounded-md"
-              rows="4"
-            ></textarea>
-          </div>
-          <button
-            type="button"
-            className="w-full py-2 bg-[#1A73E8] text-white rounded-md text-[16px] font-[500]"
-          >
-            Send
-          </button>
-        </form>
-      </div>
-    </div>
-  );
-};
 export default Refer;
