@@ -20,7 +20,7 @@ const Modal = ({ closeModal }) => {
 
     const handleSubmit = async () => {
         try {
-            const response = await fetch('https://accredian-backend-28mi.onrender.com/api/v1', {
+            const response = await fetch('https://accredian-backend-28mi.onrender.com/api/v1/refer', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
