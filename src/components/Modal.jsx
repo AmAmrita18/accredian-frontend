@@ -20,7 +20,7 @@ const Modal = ({ closeModal }) => {
 
     const handleSubmit = async () => {
         try {
-            const response = await fetch('http://localhost:8080/api/v1/refer', {
+            const response = await fetch('https://accredian-backend-28mi.onrender.com/api/v1', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -96,7 +96,7 @@ const Modal = ({ closeModal }) => {
                 className="block text-[16px] font-[500] mb-2"
                 htmlFor="message"
               >
-                Message
+                Desired Course
               </label>
               <textarea
                 id="message"
